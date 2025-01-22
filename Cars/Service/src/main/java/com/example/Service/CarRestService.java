@@ -15,7 +15,6 @@ public class CarRestService {
 		this.catalogData = catalogData;
 	}
 
-	// Producer methods
 	public List<Producer> getAllProducers() {
 		return catalogData.getProducerRepository().findAll();
 	}
@@ -37,7 +36,6 @@ public class CarRestService {
 		}
 	}
 
-	// CarModel methods
 	public List<CarModel> getAllCarModels() {
 		return catalogData.getCarModelRepository().findAll();
 	}
@@ -59,7 +57,6 @@ public class CarRestService {
 		}
 	}
 
-	// CarClass methods
 	public List<CarClass> getAllCarClasses() {
 		return catalogData.getCarClassRepository().findAll();
 	}
@@ -81,7 +78,6 @@ public class CarRestService {
 		}
 	}
 
-	// FuelType methods
 	public List<FuelType> getAllFuelTypes() {
 		return catalogData.getFuelTypeRepository().findAll();
 	}
@@ -103,7 +99,6 @@ public class CarRestService {
 		}
 	}
 
-	// Car methods
 	public List<Car> getAllCars() {
 		return catalogData.getCarRepository().findAll();
 	}
@@ -121,7 +116,7 @@ public class CarRestService {
 		if (catalogData.getCarRepository().existsById(id)) {
 			catalogData.getCarRepository().deleteById(id);
 		} else {
-			throw new RuntimeException("Car not found with id: " + id);
+			throw new RuntimeException("Nie znaleziono samochodu o takim id: " + id);
 		}
 	}
 }

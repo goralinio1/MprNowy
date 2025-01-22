@@ -38,7 +38,6 @@ public class CarRestController {
         return ResponseEntity.noContent().build();
     }
 
-    // CarModel endpoints
     @GetMapping("/models")
     public List<CarModel> getAllCarModels() {
         return carRestService.getAllCarModels();
@@ -60,7 +59,6 @@ public class CarRestController {
         return ResponseEntity.noContent().build();
     }
 
-    // CarClass endpoints
     @GetMapping("/classes")
     public List<CarClass> getAllCarClasses() {
         return carRestService.getAllCarClasses();
@@ -82,7 +80,6 @@ public class CarRestController {
         return ResponseEntity.noContent().build();
     }
 
-    // FuelType endpoints
     @GetMapping("/fueltypes")
     public List<FuelType> getAllFuelTypes() {
         return carRestService.getAllFuelTypes();
@@ -104,7 +101,6 @@ public class CarRestController {
         return ResponseEntity.noContent().build();
     }
 
-    // Car endpoints
     @GetMapping("/cars")
     public List<Car> getAllCars() {
         return carRestService.getAllCars();

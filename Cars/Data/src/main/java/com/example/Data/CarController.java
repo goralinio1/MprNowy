@@ -15,17 +15,10 @@ public class CarController {
         this.carService = carService;
     }
 
-    /**
-     * Endpoint do aktualizacji producentów i pobierania danych samochodów
-     * na podstawie listy marek podanych przez użytkownika.
-     *
-     * @param brands Lista marek samochodów.
-     * @return Odpowiedź z potwierdzeniem.
-     */
     @GetMapping("/update")
     public ResponseEntity<String> updateProducersAndFetchCars(@RequestParam List<String> brands) {
         carService.updateProducersAndFetchCars(brands);
-        return ResponseEntity.ok("Producers updated and car data fetched for the last 10 years for brands: " + brands);
+        return ResponseEntity.ok("Samochody z ostatnich 10 lat zaktualizowane: " + brands);
     }
 }
 

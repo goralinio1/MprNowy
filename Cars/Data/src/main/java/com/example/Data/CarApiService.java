@@ -25,11 +25,6 @@ public class CarApiService {
         restTemplate = new RestTemplate();
     }
 
-    /**
-     * Pobiera listę producentów samochodów z API.
-     *
-     * @return Lista producentów w formacie Map<String, Object>.
-     */
     public List<Map<String, Object>> fetchAllCarMakers() {
         String apiUrl = "https://api.api-ninjas.com/v1/carmakes";
 
@@ -47,13 +42,6 @@ public class CarApiService {
         return Collections.emptyList();
     }
 
-    /**
-     * Pobiera dane samochodów na podstawie marki i roku produkcji.
-     *
-     * @param brand Nazwa marki.
-     * @param year  Rok produkcji.
-     * @return Lista danych samochodów w formacie Map<String, Object>.
-     */
     public List<Map<String, Object>> fetchCarDataByBrandAndYear(String brand, int year) {
         String apiUrl = "https://api.api-ninjas.com/v1/cars?make=" + brand + "&year=" + year;
 
